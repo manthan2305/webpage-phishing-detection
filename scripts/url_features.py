@@ -363,12 +363,12 @@ def domain_in_brand(domain):
     else:
         return 0
  
-#import Levenshtein
-#def domain_in_brand1(domain):
-#    for d in allbrand:
-#        if len(Levenshtein.editops(domain.lower(), d.lower()))<2:
-#            return 1
-#    return 0
+import Levenshtein
+def domain_in_brand1(domain):
+    for d in allbrand:
+        if len(Levenshtein.editops(domain.lower(), d.lower()))<2:
+            return 1
+    return 0
 
 
 
