@@ -6,16 +6,16 @@ import re
 #               Number of hyperlinks present in a website (Kumar Jain'18)
 #################################################################################################################################
 
-# def nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon):
-#     return len(Href['internals']) + len(Href['externals']) +\
-#            len(Link['internals']) + len(Link['externals']) +\
-#            len(Media['internals']) + len(Media['externals']) +\
-#            len(Form['internals']) + len(Form['externals']) +\
-#            len(CSS['internals']) + len(CSS['externals']) +\
-#            len(Favicon['internals']) + len(Favicon['externals'])
+def nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon):
+    return len(Href['internals']) + len(Href['externals']) +\
+           len(Link['internals']) + len(Link['externals']) +\
+           len(Media['internals']) + len(Media['externals']) +\
+           len(Form['internals']) + len(Form['externals']) +\
+           len(CSS['internals']) + len(CSS['externals']) +\
+           len(Favicon['internals']) + len(Favicon['externals'])
 
-def nb_hyperlinks(dom):
-    return len(dom.find("href")) + len(dom.find("src"))
+# def nb_hyperlinks(dom):
+#     return len(dom.find("href")) + len(dom.find("src"))
 
 #################################################################################################################################
 #               Internal hyperlinks ratio (Kumar Jain'18)

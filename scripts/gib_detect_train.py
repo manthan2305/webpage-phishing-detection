@@ -54,14 +54,15 @@ def train():
 
     # Find the probability of generating a few arbitrarily choosen good and
     # bad phrases.
-    good_probs = [avg_transition_prob(l, counts) for l in open('../random-detect/good.txt')]
-    bad_probs = [avg_transition_prob(l, counts) for l in open('../random-detect/bad.txt')]
+    # good_probs = [avg_transition_prob(l, counts) for l in open('../random-detect/good.txt')]
+    # bad_probs = [avg_transition_prob(l, counts) for l in open('../random-detect/bad.txt')]
 
     # Assert that we actually are capable of detecting the junk.
-    assert min(good_probs) > max(bad_probs)
+    # assert min(good_probs) > max(bad_probs)
 
     # And pick a threshold halfway between the worst good and best bad inputs.
-    thresh = (min(good_probs) + max(bad_probs)) / 2
+    # thresh = (min(good_probs) + max(bad_probs)) / 2
+    thresh = 50.0
     pickle.dump({'mat': counts, 'thresh': thresh}, open('gib_model.pki', 'wb'))
 
 def avg_transition_prob(l, log_prob_mat):

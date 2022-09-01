@@ -108,7 +108,7 @@ def domain_age(domain):
 
     url = domain.split("//")[-1].split("/")[0].split('?')[0]
     show = "https://input.payapi.io/v1/api/fraud/domain/age/" + url
-    r = requests.get(show)
+    r = requests.get(show, verify=False)
 
     if r.status_code == 200:
         data = r.text

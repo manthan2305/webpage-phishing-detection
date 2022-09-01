@@ -379,6 +379,8 @@ def extract_features(url, status):
         
         Href, Link, Anchor, Media, Form, CSS, Favicon, IFrame, Title, Text = extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, Form, CSS, Favicon, IFrame, Title, Text)
 
+        print('URL: ', url)
+
         row = [url,
                # url-based features
                urlfe.url_length(url),
@@ -444,7 +446,7 @@ def extract_features(url, status):
                urlfe.statistical_report(url, domain),
 
                
-               # # # content-based features
+            #    # # # content-based features
                  ctnfe.nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.internal_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.external_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
@@ -460,7 +462,7 @@ def extract_features(url, status):
                  ctnfe.submitting_to_email(Form),
                  ctnfe.internal_media(Media),
                  ctnfe.external_media(Media),
-               #  # additional content-based features
+            #    #  # additional content-based features
                  ctnfe.sfh(hostname,Form),
                  ctnfe.iframe(IFrame),
                  ctnfe.popup_window(Text),
@@ -471,17 +473,17 @@ def extract_features(url, status):
                  ctnfe.domain_in_title(extracted_domain.domain, Title),
                  ctnfe.domain_with_copyright(extracted_domain.domain, Text),
                  
-                # # # thirs-party-based features
+            #     # # # thirs-party-based features
                  trdfe.whois_registered_domain(domain),
                  trdfe.domain_registration_length(domain),
-                 trdfe.domain_age(domain),
+                 trdfe.domain_age(domain), 
                  trdfe.web_traffic(url),
                  trdfe.dns_record(domain),
                  trdfe.google_index(url),
                  trdfe.page_rank(key,domain),
                # status
                status]
-        #print(row)
+        # print(row)
         return row
     return None
 
