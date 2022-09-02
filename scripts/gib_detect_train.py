@@ -10,6 +10,11 @@ Created on Fri Jun 26 17:45:27 2020
 
 import math
 import pickle
+import os
+
+file_path = os.path.abspath(__file__)
+root_dir = this_dir = "/".join(file_path.split('/')[:-2])
+
 
 accepted_chars = 'abcdefghijklmnopqrstuvwxyz '
 
@@ -38,7 +43,7 @@ def train():
 
     # Count transitions from big text file, taken
     # from http://norvig.com/spell-correct.html
-    for line in open('../random-detect/big.txt'):
+    for line in open(os.path.join(root_dir, 'random-detect/big.txt')):
         for a, b in ngram(2, line):
             counts[pos[a]][pos[b]] += 1
 
@@ -63,7 +68,8 @@ def train():
     # And pick a threshold halfway between the worst good and best bad inputs.
     # thresh = (min(good_probs) + max(bad_probs)) / 2
     thresh = 50.0
-    pickle.dump({'mat': counts, 'thresh': thresh}, open('gib_model.pki', 'wb'))
+    output_file = os.path.join(root_dir, 'scripts/gib_model.pki')
+    pickle.dump({'mat': counts, 'thresh': thresh}, open(output_file, 'wb'))
 
 def avg_transition_prob(l, log_prob_mat):
     """ Return the average transition prob from l through log_prob_mat. """

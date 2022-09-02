@@ -4,6 +4,11 @@ import pickle
 import numpy as np
 import editdistance
 import gib_detect_train
+import os
+
+file_path = os.path.abspath(__file__)
+this_dir = this_dir = "/".join(file_path.split('/')[:-1])
+
 
 #from traceback import format_exc
 
@@ -14,12 +19,12 @@ class nlp_class:
 
     def __init__(self):
         #self.logger = NsLog("log")
-        self.path_data = "data/"
+        self.path_data = os.path.join(this_dir, "data/")
         self.name_keywords = "keywords.txt"
         self.name_brand_file = "allbrands.txt"
         self.name_random_model = "gib_model.pki"
 
-        model_data = pickle.load(open(self.name_random_model, 'rb'))
+        model_data = pickle.load(open(os.path.join(this_dir, self.name_random_model), 'rb'))
         self.model_mat = model_data['mat']
         self.threshold = model_data['thresh']
 

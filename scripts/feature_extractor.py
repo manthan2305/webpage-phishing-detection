@@ -6,6 +6,13 @@ Created on Thu May 14 13:23:31 2020
 @author: hannousse
 """
 
+import os, sys
+
+file_path = os.path.abspath(__file__)
+this_dir = "/".join(file_path.split('/')[:-1])
+
+sys.path.append(this_dir)
+
 import content_features as ctnfe
 import url_features as urlfe
 import external_features as trdfe
@@ -16,7 +23,6 @@ import tldextract
 import requests
 import json
 import csv
-import os
 import re
 
 
@@ -24,7 +30,7 @@ import re
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
-key = '0sgwgkk0k4soss84cgskswwccgow40ckkk0c4c0s'
+key = '0sgwgkk0k4soss84cgskswwccgow40ckkk0c4c0s' # use your own key
 
 import signal
 
@@ -46,7 +52,7 @@ def deadline(timeout, *args):
         return new_f
     return decorate
 
-@deadline(5)
+# @deadline(5)
 def is_URL_accessible(url):
     #iurl = url
     #parsed = urlparse(url)
