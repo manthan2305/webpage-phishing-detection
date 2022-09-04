@@ -2,6 +2,15 @@
 Machine Learning based spam website detection
 
 #### try [heroku app](https://radiant-sierra-41278.herokuapp.com/)
+
+--------------------------------------------
+
+**Original work by:**
+
+Hannousse, Abdelhakim; Yahiouche, Salima (2021), “[Web page phishing detection](https://data.mendeley.com/datasets/c2gw7fy2j4/3)”, Mendeley Data, V3, doi: 10.17632/c2gw7fy2j4.3
+
+Thank you Abdelhakim Hannousse for your help.
+
 --------------------------------------------
 
 ### Dataset
@@ -55,13 +64,6 @@ Feature extractor code is available [here](https://data.mendeley.com/datasets/c2
 
 > In order to run [Feature extractor](/scripts/feature_extractor.py), some part of the code is commented and modified compare to the original work by author of the [paper](10.1016/j.engappai.2021.104347).
 
-----------------------------------------------
-
-### Citation
-
-Hannousse, Abdelhakim; Yahiouche, Salima (2021), “[Web page phishing detection](https://data.mendeley.com/datasets/c2gw7fy2j4/3)”, Mendeley Data, V3, doi: 10.17632/c2gw7fy2j4.3
-
-Thank you Abdelhakim Hannousse for your help.
 
 
 
