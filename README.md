@@ -1,6 +1,7 @@
 # webpage-phishing-detection
 Machine Learning based spam website detection
 
+try (heroku app)[https://radiant-sierra-41278.herokuapp.com/]
 --------------------------------------------
 
 ### Dataset
@@ -42,7 +43,7 @@ streamlit run app.py
 
 ----------------------------------------------
 
-### ML Part
+### Machine Learning
 
 - [main.ipynb](/main.ipynb) contains machine learning model generation and analysis code
 
