@@ -5,8 +5,8 @@ Machine Learning based spam website detection
 
 ### Dataset
 
-**Mendeley Data:** [Web page phishing detection](https://data.mendeley.com/datasets/c2gw7fy2j4/3)
-**Kaggle:** [Dataset](https://www.kaggle.com/datasets/shashwatwork/web-page-phishing-detection-dataset)
+- **Mendeley Data:** [Web page phishing detection](https://data.mendeley.com/datasets/c2gw7fy2j4/3)
+- **Kaggle:** [Dataset](https://www.kaggle.com/datasets/shashwatwork/web-page-phishing-detection-dataset)
 
 --------------------------------------------
 
@@ -22,7 +22,7 @@ source phishing/bin/activate
 ```
 pip install -r requirements_full.txt
 ```
-For heroku use [requirements.txt](/requirements.txt) 
+For heroku, use [requirements.txt](/requirements.txt) 
 
 ---------------------------------------------
 
@@ -39,6 +39,14 @@ python infer.py
 ```
 streamlit run app.py
 ```
+
+----------------------------------------------
+
+### ML Part
+
+- [main.ipynb](/main.ipynb) contains machine learning model generation and analysis code
+
+----------------------------------------------
 
 ### Feature extraction
 
