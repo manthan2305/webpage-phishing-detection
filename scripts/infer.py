@@ -32,15 +32,15 @@ def inference(features):
 
 def main():
 
-    # URL = 'http://www.malwaredomainlist.com/forums/index.php?PHPSESSID=505129431572df4552d91501d09b5767&topic=3270.msg11613#msg11613'
+    URL = 'http://www.malwaredomainlist.com/forums/index.php?PHPSESSID=505129431572df4552d91501d09b5767&topic=3270.msg11613#msg11613'
 
     # URL = 'https://uniswappro.llc/#/pages/login/index'
-    # STATUS = 'phishing' # legitimate, phishing
+    STATUS = 'phishing' # legitimate, phishing
 
-    URL = 'https://data.mendeley.com/datasets/c2gw7fy2j4/3'
+    # URL = 'https://data.mendeley.com/datasets/c2gw7fy2j4/3'
 
     # URL = 'https://medium.com/@lovishchopra/how-i-got-into-stanford-ms-in-cs-application-experience-tips-and-tricks-4ba1772bb9b'
-    STATUS = 'legitimate'
+    # STATUS = 'legitimate'
 
     features = extract_features(URL, STATUS)
 
